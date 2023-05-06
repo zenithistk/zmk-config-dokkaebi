@@ -24,8 +24,8 @@
             label = "GRAVE_ESCAPE";
             #binding-cells = <0>;
             bindings = <&kp ESC>, <&kp GRAVE>;
-            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
+            keep-mods = <(MOD_RSFT)>;
         };
         bhm: balanced_homerow_mods {
             compatible = "zmk,behavior-hold-tap";
@@ -33,7 +33,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <175>;    // <---[[moderate duration]]
             quick-tap-ms = <120>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
     };
