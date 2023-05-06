@@ -27,12 +27,14 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-        td_ctbs: tap_dance_mod_tap {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <175>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -41,11 +43,11 @@
 
         default_layer {
             bindings = <
-&gresc          &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                        &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp DEL
-&kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
-&mt LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
-&kp LSHFT       &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LALT &lt 1 SPACE &td_ctbs           &kp ENTER  &lt 1 SPACE  &lt 2 RALT
+&gresc           &kp N1 &kp N2 &kp N3   &kp N4   &kp N5                        &kp N6 &kp N7   &kp N8    &kp N9  &kp N0   &kp DEL
+&kp TAB          &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
+&bhm LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
+&kp LSHFT        &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
+                           &kp LALT &bhm 1 SPACE &bhm LCTRL BSPC           &kp ENTER  &bhm 1 SPACE  &bhm 2 RALT
             >;
 
         };
