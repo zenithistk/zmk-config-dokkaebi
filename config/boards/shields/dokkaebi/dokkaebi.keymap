@@ -4,7 +4,13 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &mt {
-    tapping-term-ms = <400>;
+    tapping-term-ms = <175>;
+    quick-tap-ms = <120>;
+};
+
+&lt {
+    tapping-term-ms = <175>;
+    quick-tap-ms = <120>;
 };
 
 / {
@@ -30,16 +36,6 @@
             bindings = <&kp ESC>, <&kp GRAVE>;
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_LALT|MOD_RALT)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <175>;
-            quick-tap-ms = <120>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
         };
     };
 
