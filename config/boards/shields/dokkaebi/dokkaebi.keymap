@@ -37,9 +37,6 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
-        &mt {
-            retro-tap;
-        };
     };
 
     keymap {
