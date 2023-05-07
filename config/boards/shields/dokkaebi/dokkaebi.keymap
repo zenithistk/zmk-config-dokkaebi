@@ -4,11 +4,11 @@
 #include <dt-bindings/zmk/ext_power.h>
 
 &mt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <20>;
 };
 
 &lt {
-    tapping-term-ms = <175>;
+    tapping-term-ms = <20>;
 };
 
 / {
