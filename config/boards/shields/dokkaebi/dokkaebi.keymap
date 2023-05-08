@@ -24,6 +24,11 @@
             key-positions = <34 35>;
             bindings = <&kp RBKT>;
         };
+        combo_lt2 {
+            timeout-ms = <50>;
+            key-positions = <48 49 50>;
+            bindings = <&mo 2>;
+        };
     };
 
     behaviors {
@@ -81,7 +86,7 @@
 &bt BT_CLR       &bt BT_SEL 0      &bt BT_SEL 1          &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                 &trans     &trans     &trans     &trans     &trans     &trans
 &ext_power EP_ON &ext_power EP_OFF &ext_power EP_TOG     &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
-&trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans           &trans            &trans                &trans        &trans        &kp N5                       &trans     &trans     &trans     &trans     &trans     &trans
                                                          &trans        &trans        &trans                       &trans     &trans     &trans
             >;
 
