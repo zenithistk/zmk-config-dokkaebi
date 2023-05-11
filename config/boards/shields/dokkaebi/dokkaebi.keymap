@@ -128,7 +128,7 @@
 
         raise_layer {
             bindings = <
-&bt BT_CLR       &bt_0             &bt_1                 &bt_2         &bt_3         &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans           &trans            &trans                &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
