@@ -132,7 +132,7 @@
         raise_layer {
             bindings = <
 &bt BT_CLR    &bt_0         &bt_1         &bt_2         &bt_3         &bt_4                        &trans     &trans     &trans     &trans     &trans     &trans
-&out OUT_USB  &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&out OUT_TOG  &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                                           &trans        &trans        &trans                       &trans     &trans     &trans
