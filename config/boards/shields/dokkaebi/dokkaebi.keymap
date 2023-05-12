@@ -5,13 +5,11 @@
 #include <dt-bindings/zmk/outputs.h>
 
 &mt {
-    tapping-term-ms = <175>;
-    quick-tap-ms = <100>;
+    tapping-term-ms = <160>;
 };
 
 &lt {
     tapping-term-ms = <175>;
-    quick-tap-ms = <100>;
 };
 
 / {
@@ -56,6 +54,16 @@
             #binding-cells = <0>;
             tapping-term-ms = <175>;
             bindings = <&kp RSHFT>, <&kp RBKT>;
+        };
+        gqt: global-quick-tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "GLOBAL_QUICK_TAP";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <160>;
+            quick-tap-ms = <120>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
         };
     };
 
@@ -115,7 +123,7 @@
 &kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &mt LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LALT &lt 1 SPACE &mt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &kp RALT
+                           &kp LALT &lt 1 SPACE &gqt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &kp RALT
             >;
 
         };
