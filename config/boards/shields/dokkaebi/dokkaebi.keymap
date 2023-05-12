@@ -55,20 +55,6 @@
             tapping-term-ms = <175>;
             bindings = <&kp RSHFT>, <&kp RBKT>;
         };
-        td_mt_ctrl_bspc: tap_dance_mod_tap_ctrl_bspc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_CTRL_BSPC";
-            #binding-cells = <0>;
-            tapping-term-ms = <160>;
-            bindings = <&mt LCTRL BSPC>, <&kp BSPC>;
-        };
-        td_mt_l1_spc: tap_dance_mod_tap_layer1_space {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_MOD_TAP_LAYER1_SPACE";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&lt 1 SPACE>, <&kp SPACE>;
-        };
     };
 
     macros {
@@ -127,7 +113,7 @@
 &kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &mt LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LALT &td_mt_l1_spc &td_mt_ctrl_bspc           &kp ENTER  &td_mt_l1_spc  &kp RALT
+                           &kp LALT &lt 1 SPACE &mt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &kp RALT
             >;
 
         };
@@ -146,7 +132,7 @@
         raise_layer {
             bindings = <
 &bt BT_CLR    &bt_0         &bt_1         &bt_2         &bt_3         &bt_4                        &trans     &trans     &trans     &trans     &trans     &trans
-&out OUT_TOG  &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&out OUT_TOG  &key_repeat        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                                           &trans        &trans        &trans                       &trans     &trans     &trans
