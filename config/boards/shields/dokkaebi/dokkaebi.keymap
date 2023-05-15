@@ -48,6 +48,13 @@
             tapping-term-ms = <150>;
             bindings = <&kp RALT>, <&tog 1>;
         };
+        td_rctrl_tog0: tap_dance_rctrl_toggle_layer_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_RCTRL_TOGGLE_LAYER_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <150>;
+            bindings = <&kp RCTL>, <&tog 0>;
+        };
     };
 
     macros {
@@ -117,7 +124,7 @@
 &trans     &trans     &trans     &trans     &trans     &kp F11                &kp F12    &trans     &kp UP     &trans     &trans     &kp END
 &trans     &trans     &trans     &trans     &trans     &kp C_VOL_UP           &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &kp PG_UP
 &trans     &trans     &trans     &trans     &trans     &kp C_VOL_DN           &trans     &trans     &trans     &trans     &kp BSLH   &kp PG_DN
-                                 &trans     &kp SPACE  &kp LCTRL              &trans     &kp SPACE  &kp RCTRL
+                                 &trans     &kp SPACE  &kp LCTRL              &kp RSHFT     &kp SPACE  &td_rctrl_tog0
             >;
 
         };
