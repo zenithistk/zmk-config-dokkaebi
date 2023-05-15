@@ -41,19 +41,19 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-        td_ralt_tog1: tap_dance_ralt_toggle_layer_1 {
+        td_ralt_to1: tap_dance_ralt_to_layer_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_RALT_TOGGLE_LAYER_1";
+            label = "TAP_DANCE_RALT_TO_LAYER_1";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp RALT>, <&tog 1>;
+            bindings = <&kp RALT>, <&to 1>;
         };
-        td_rctrl_tog0: tap_dance_rctrl_toggle_layer_0 {
+        td_rctrl_to0: tap_dance_rctrl_to_layer_0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_RCTRL_TOGGLE_LAYER_0";
+            label = "TAP_DANCE_RCTRL_TO_LAYER_0";
             #binding-cells = <0>;
             tapping-term-ms = <150>;
-            bindings = <&kp RCTL>, <&tog 0>;
+            bindings = <&kp RCTL>, <&to 0>;
         };
     };
 
