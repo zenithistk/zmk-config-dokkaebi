@@ -10,7 +10,6 @@
 
 &lt {
     tapping-term-ms = <175>;
-    quick-tap-ms = <120>;
 };
 
 / {
@@ -42,29 +41,12 @@
             mods = <(MOD_LGUI|MOD_LSFT|MOD_RGUI|MOD_RSFT|MOD_RALT)>;
             keep-mods = <(MOD_RSFT)>;
         };
-        td_lsftbkt: tap_dance_lsft_bkt {
+        td_ralt_tog1: tap_dance_ralt_toggle_layer_1 {
             compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_LSFT_BKT";
+            label = "TAP_DANCE_RALT_TOGGLE_LAYER_1";
             #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp LSHFT>, <&kp LBKT>;
-        };
-        td_rsftbkt: tap_dance_rsft_bkt {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAP_DANCE_RSFT_BKT";
-            #binding-cells = <0>;
-            tapping-term-ms = <175>;
-            bindings = <&kp RSHFT>, <&kp RBKT>;
-        };
-        gqt: global-quick-tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "GLOBAL_QUICK_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <160>;
-            quick-tap-ms = <120>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <150>;
+            bindings = <&kp RALT>, <&tog 1>;
         };
     };
 
@@ -124,7 +106,7 @@
 &kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &mt LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LALT &lt 1 SPACE &gqt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &kp RALT
+                           &kp LALT &lt 1 SPACE &mt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &td_ralt_tog1
             >;
 
         };
@@ -143,7 +125,7 @@
         raise_layer {
             bindings = <
 &bt BT_CLR    &bt_0         &bt_1         &bt_2         &bt_3         &bt_4                        &trans     &trans     &trans     &trans     &trans     &trans
-&out OUT_TOG  &key_repeat        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                                           &trans        &trans        &trans                       &trans     &trans     &trans
