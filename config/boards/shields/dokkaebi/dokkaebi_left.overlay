@@ -13,8 +13,9 @@
         ;
 };
 
-&i2c1 {
+&pro_micro_i2c {
 	status = "okay";
+
 	trackball_pim447@a {
 		compatible = "pimoroni,trackball_pim447";
 		reg = <0xa>;
@@ -35,7 +36,7 @@
 		scroll-divisor-y = <2>;	// Increase wheel velocity (default: 2); used by voidyourwarranty branch 
 		invert-scroll-x;        // Invert wheel X axis (left is right, and vice versa)
 		invert-scroll-y;        // Invert wheel Y axis (up is down, and vice versa)
-		mode = <PIM447_SCROLL>; // Act as mouse wheels at startup (default: PIM447_MOVE for a pointer)
+		mode = <PIM447_MOVE>; // Act as mouse wheels at startup (default: PIM447_MOVE for a pointer)
 		//norm	= <1>;			// voidyourwarranty branch, not sure what does
 		//exactness = <4>;		// voidyourwarranty branch, not sure what does
 		//max-accel = <100>;	// voidyourwarranty branch, not sure what does
