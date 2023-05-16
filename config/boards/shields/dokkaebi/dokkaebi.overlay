@@ -1,0 +1,27 @@
+#include <dt-bindings/zmk/trackball_pim447.h> // for PIM447_MOVE and PIM447_SCROLL constants
+
+/ {
+    chosen {
+        zmk,kscan = &default_kscan;
+    };
+
+    default_kscan: kscan {
+        compatible = "zmk,kscan-gpio-direct";
+        label = "default_kscan";
+
+        input-gpios
+            = <&pro_micro 1 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 0 GPIO_ACTIVE_HIGH>
+            ;
+    };
+};
+
+&pro_micro_i2c {
+	status = "okay";
+
+	trackball_pim447@a {
+		compatible = "pimoroni,trackball_pim447";
+		reg = <0xa>;
+		label = "TRACKBALL_PIM447";
+	};
+};

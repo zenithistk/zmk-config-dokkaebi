@@ -1,5 +1,2 @@
-config SHIELD_DOKKAEBI_LEFT
-    def_bool $(shields_list_contains,dokkaebi_left)
-
-config SHIELD_DOKKAEBI_RIGHT
-    def_bool $(shields_list_contains,dokkaebi_right)
+config SHIELD_DOKKAEBI
+    def_bool $(shields_list_contains,dokkaebi)
