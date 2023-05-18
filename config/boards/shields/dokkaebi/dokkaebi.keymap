@@ -28,7 +28,7 @@
         combo_lt2 {
             timeout-ms = <50>;
             key-positions = <48 49 50>;
-            bindings = <&mo 2>;
+            bindings = <&mo 3>;
         };
     };
 
@@ -113,23 +113,34 @@
 &kp TAB         &kp Q  &kp W  &kp E    &kp R    &kp T                         &kp Y  &kp U    &kp I     &kp O   &kp P    &kp EQUAL
 &mt LGUI MINUS  &kp A  &kp S  &kp D    &kp F    &kp G                         &kp H  &kp J    &kp K     &kp L   &kp SEMI &kp SQT
 &kp LSHFT       &kp Z  &kp X  &kp C    &kp V    &kp B                         &kp N  &kp M    &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-                           &kp LALT &lt 1 SPACE &mt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &td_ralt_to1
+                           &kp LALT &lt 2 SPACE &mt LCTRL BSPC           &kp ENTER  &lt 1 SPACE  &td_ralt_to1
             >;
 
         };
 
         lower_layer {
             bindings = <
-&trans     &kp F1     &kp F2     &kp F3     &kp F4     &kp F5                 &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp HOME
-&trans     &trans     &trans     &trans     &trans     &kp F11                &kp F12    &trans     &kp UP     &trans     &trans     &kp END
-&trans     &trans     &trans     &trans     &trans     &kp C_VOL_UP           &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &kp PG_UP
-&trans     &trans     &trans     &trans     &trans     &kp C_VOL_DN           &trans     &trans     &trans     &trans     &kp BSLH   &kp PG_DN
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &trans     &kp HOME
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &kp UP     &trans     &trans     &kp END
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &kp PG_UP
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &kp BSLH   &kp PG_DN
                                  &trans     &kp SPACE  &kp LCTRL              &kp RSHFT     &kp SPACE  &td_rctrl_to0
             >;
 
         };
 
         raise_layer {
+            bindings = <
+&trans        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                       &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+&trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &kp F12
+&trans        &trans        &trans        &trans        &trans        &kp C_VOL_UP                 &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &trans        &trans        &trans        &trans        &kp C_VOL_DN                 &trans     &trans     &trans     &trans     &trans     &trans
+                                          &trans        &trans        &kp BSPC                     &trans     &trans     &trans
+            >;
+
+        };
+
+        adjust_layer {
             bindings = <
 &bt BT_CLR    &bt_0         &bt_1         &bt_2         &bt_3         &bt_4                        &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
@@ -139,5 +150,6 @@
             >;
 
         };
+        
     };
 };
