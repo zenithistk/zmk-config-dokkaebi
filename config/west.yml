@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: osmakari
-      revision: main
+      revision: v1.0.1
       import: app/west.yml
   self:
     path: config
