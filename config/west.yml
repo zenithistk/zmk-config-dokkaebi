@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: jgreel
-      url-base: https://github.com/jgreel
+    - name: osmakari
+      url-base: https://github.com/osmakari
   projects:
     - name: zmk
-      remote: jgreel
-      revision: devel-mouse-pim447
+      remote: osmakari
+      revision: main
       import: app/west.yml
   self:
     path: config

@@ -5,6 +5,6 @@ type: shield
 url: https://github.com/zenithistk/dokkaebi
 requires:
   - pro_micro
-  - pimoroni trackball_pim447
+  - azoteq iqs5xx
 features:
   - mouse
