@@ -1,19 +1,9 @@
-if SHIELD_DOKKAEBI_LEFT
+if SHIELD_DOKKAEBI
 
 config ZMK_KEYBOARD_NAME
     default "dokkaebi"
 
-config ZMK_SPLIT_ROLE_CENTRAL
-    default y
-
-endif
-
-if SHIELD_DOKKAEBI_LEFT || SHIELD_DOKKAEBI_RIGHT
-
-config ZMK_SPLIT
-    default y
-
 config BT_GATT_ENFORCE_SUBSCRIPTION
     default n
-
+    
 endif
