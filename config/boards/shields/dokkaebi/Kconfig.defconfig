@@ -13,7 +13,4 @@ if SHIELD_DOKKAEBI_LEFT || SHIELD_DOKKAEBI_RIGHT
 config ZMK_SPLIT
     default y
 
-config BT_GATT_ENFORCE_SUBSCRIPTION
-    default n
-
 endif
