@@ -12,10 +12,6 @@
     tapping-term-ms = <175>;
 };
 
-&mwh {
-    acceleration-exponent=<1>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
