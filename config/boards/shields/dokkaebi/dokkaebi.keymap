@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 
 &mt {
     tapping-term-ms = <160>;
@@ -132,7 +131,7 @@
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &trans     &kp HOME
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &kp UP     &trans     &trans     &kp END
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &kp PG_UP
-&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &trans     &kp PG_DN
+&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &kp BSLH   &kp PG_DN
                                  &trans     &kp SPACE  &kp LCTRL              &kp RSHFT  &kp SPACE  &td_rctrl_to0
             >;
 
@@ -141,9 +140,9 @@
         raise_layer {
             bindings = <
 &kp C_VOL_UP  &kp F1        &kp F2         &kp F3           &kp F4            &kp F5                       &kp F6     &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
-&kp C_VOL_DN  &trans        &trans         &mmv MOVE_UP     &trans            &trans                       &trans     &trans     &trans     &trans     &trans     &kp F12
-&trans        &mkp MB1      &mmv MOVE_LEFT &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &mwh SCROLL_UP               &trans     &trans     &trans     &trans     &trans     &trans
-&trans        &mkp MB2      &trans         &mwh SCROLL_LEFT &mwh SCROLL_RIGHT &mwh SCROLL_DOWN             &trans     &trans     &trans     &trans     &kp BSLH   &trans
+&kp C_VOL_DN  &trans        &trans         &trans           &trans            &trans                       &trans     &trans     &trans     &trans     &trans     &kp F12
+&trans        &trans        &trans         &trans           &trans            &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &trans        &trans         &trans           &trans            &trans                       &trans     &trans     &trans     &trans     &kp BSLH   &trans
                                            &trans           &trans            &kp BSPC                     &trans     &trans     &trans
             >;
 
