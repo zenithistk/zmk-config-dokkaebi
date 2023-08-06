@@ -13,4 +13,10 @@ if SHIELD_DOKKAEBI_LEFT || SHIELD_DOKKAEBI_RIGHT
 config ZMK_SPLIT
     default y
 
+config CONFIG_BT_CTLR_TX_PWR_PLUS_8
+    default y
+
+config CONFIG_BT_GATT_ENFORCE_SUBSCRIPTION
+    default y
+
 endif
