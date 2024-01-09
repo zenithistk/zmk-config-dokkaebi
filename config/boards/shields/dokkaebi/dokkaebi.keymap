@@ -63,7 +63,7 @@
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
-        rpi2: require_prior_idle {
+        rpi2: require_prior_idle2 {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
