@@ -202,8 +202,8 @@
             bindings = <
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &trans     &trans
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &kp UP     &trans     &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &trans
-&trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &trans     &trans     &kp BSLH   &trans
+&trans     &trans     &trans     &trans     &trans     &trans                 &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &trans
+&trans     &trans     &trans     &trans     &trans     &trans                 &kp END    &trans     &kp PG_UP  &kp PG_DN  &kp BSLH   &trans
                                  &trans     &kp SPACE  &kp LCTRL              &trans     &trans     &trans
             >;
 
