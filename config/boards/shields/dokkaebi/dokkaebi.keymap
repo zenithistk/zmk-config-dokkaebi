@@ -109,8 +109,9 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 0>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 1>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 2>;
         };
 
@@ -121,8 +122,9 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 1>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 0>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 2>;
         };
         
@@ -133,9 +135,10 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 2>
-                , <&macro_wait_time 300>
-                , <&bt BT_DISC 1>
-                , <&bt BT_DISC 2>;
+                , <&macro_wait_time 1000>
+                , <&bt BT_DISC 0>
+                , <&macro_wait_time 1000>
+                , <&bt BT_DISC 1>;
         };
 
         select_usb: usb_profile_macro {
@@ -144,9 +147,11 @@
             #binding-cells = <0>;
             bindings
                 = <&out OUT_USB>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 0>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 1>
+                , <&macro_wait_time 1000>
                 , <&bt BT_DISC 2>;
         };
 
@@ -157,7 +162,7 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 0>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_CLR>;
         };
 
@@ -168,7 +173,7 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 1>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_CLR>;
         };
 
@@ -179,8 +184,16 @@
             bindings
                 = <&out OUT_BLE>
                 , <&bt BT_SEL 2>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 1000>
                 , <&bt BT_CLR>;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 
@@ -204,7 +217,7 @@
 &trans     &trans     &trans     &trans     &trans     &trans                 &trans     &trans     &kp UP     &trans     &trans     &trans
 &trans     &trans     &trans     &trans     &trans     &trans                 &kp HOME   &kp LEFT   &kp DOWN   &kp RIGHT  &trans     &trans
 &trans     &trans     &trans     &trans     &trans     &trans                 &kp END    &trans     &kp PG_UP  &kp PG_DN  &kp BSLH   &trans
-                                 &trans     &kp SPACE  &kp LCTRL              &trans     &trans     &trans
+                                 &trans     &trans     &kp LCTRL              &trans     &trans     &trans
             >;
 
         };
@@ -224,7 +237,7 @@
             bindings = <
 &select_usb   &bt_0         &bt_1         &bt_2         &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &bt_0_clr     &bt_1_clr     &bt_2_clr     &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
-&trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &kp N1        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                                           &trans        &trans        &trans                       &trans     &trans     &trans
             >;
