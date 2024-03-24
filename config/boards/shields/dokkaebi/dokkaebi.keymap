@@ -108,11 +108,7 @@
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>
-                , <&bt BT_SEL 0>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 1>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 2>;
+                , <&bt BT_SEL 0>;
         };
 
         bt_1: bt_profile_macro_1 {
@@ -121,11 +117,7 @@
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>
-                , <&bt BT_SEL 1>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 0>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 2>;
+                , <&bt BT_SEL 1>;
         };
         
         bt_2: bt_profile_macro_2 {
@@ -134,11 +126,7 @@
             #binding-cells = <0>;
             bindings
                 = <&out OUT_BLE>
-                , <&bt BT_SEL 2>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 0>
-                , <&macro_wait_time 1000>
-                , <&bt BT_DISC 1>;
+                , <&bt BT_SEL 2>;
         };
 
         select_usb: usb_profile_macro {
@@ -235,9 +223,9 @@
 
         adjust_layer {
             bindings = <
-&select_usb   &bt BT_SEL 0         &bt BT_SEL 1         &bt BT_SEL 2         &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&out OUT_USB   &bt_0         &bt_1         &bt_2         &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &bt_0_clr     &bt_1_clr     &bt_2_clr     &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
-&trans        &kp N1        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&trans        &bt BT_DISC 0        &bt BT_DISC 1        &bt BT_DISC 2        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
                                           &trans        &trans        &trans                       &trans     &trans     &trans
             >;
