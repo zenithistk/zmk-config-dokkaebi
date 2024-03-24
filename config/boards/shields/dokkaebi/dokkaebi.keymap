@@ -235,7 +235,7 @@
 
         adjust_layer {
             bindings = <
-&select_usb   &bt_0         &bt_1         &bt_2         &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
+&select_usb   &&bt BT_SEL 0         &&bt BT_SEL 1         &&bt BT_SEL 2         &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &bt_0_clr     &bt_1_clr     &bt_2_clr     &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &kp N1        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
 &trans        &trans        &trans        &trans        &trans        &trans                       &trans     &trans     &trans     &trans     &trans     &trans
