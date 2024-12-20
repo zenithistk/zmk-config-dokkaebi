@@ -45,7 +45,7 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                 RC(3,8) RC(3,9) 
             compatible = "zmk,behavior-soft-off";
             #binding-cells = <0>;
             split-peripheral-off-on-press; // Turn peripheral off immediately for reliability
-            hold-time-ms = <2000>; // Only turn off if the key is held for 2 seconds or longer.
+            hold-time-ms = <0>; // Only turn off if the key is held for 2 seconds or longer.
         };
     };
 
