@@ -51,6 +51,14 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                 RC(3,8) RC(3,9) 
         };
     };
 
+    behaviors {
+        hw_soft_off: hw_soft_off {
+            compatible = "zmk,behavior-soft-off";
+            #binding-cells = <0>;
+            hold-trigger = <1000>; // 즉시 작동
+        };
+    };
+
     kscan {
         compatible = "zmk,kscan-gpio-direct";
         input-gpios = <&soft_off_gpio_key>;
